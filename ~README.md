@@ -1,2 +1,2 @@
 # Shell-Scripts
-A collection of custom shell scripts for macOS
+Collection of scripts for macOS
