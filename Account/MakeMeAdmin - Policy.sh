@@ -61,7 +61,6 @@ userMacOS=$(echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ && ! /
 fullName=$(finger | grep "$userMacOS" | sed -n 1p | awk '{print $2,$3}')
 adGroupMembership=$(/bin/launchctl asuser "$userUID" sudo -iu "$loggedInUser" dscl /Active\ Directory/$domain/All\ Domains -read /Groups/$adGroup | grep -o "$userAD" | sed -e 's/GroupMembership://g;s/'$domain'\\//g;s/^[ \t]*//;s/[ \t]*$//' | sed -n 2p)
 
-
 ##################################################################
 # Script functions (EDIT API INFO ONLY)
 ##################################################################
@@ -209,7 +208,6 @@ else
 
 fi
 }
-
 
 ##################################################################
 # main script
